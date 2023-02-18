@@ -18,7 +18,6 @@ const int butCount = 3;
 const int but1 = 20;
 const int but2 = 21;
 const int but3 = 19;  // Button 3 is routed back to input 19
-
 /**********************************************************************/
 
 /**********************************************************************/
@@ -276,7 +275,6 @@ int testX = 0;
 int testY = 0;
 
 void loop() {
-
   // Debug LED
   digitalWrite(LED_BUILTIN, HIGH);
   Serial.println("Enter Main Loop");
