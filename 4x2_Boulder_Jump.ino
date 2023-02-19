@@ -18,7 +18,6 @@
 #include "./Lib/gaem_app.cpp"
 /**********************************************************************/
 
-
 /**********************************************************************/
 // GLOBAL VARIABLES
 //static App_Register Register;
@@ -87,7 +86,7 @@ void loop() {
   Registry::GamePlayer.Update();
 
   // Update Threats
-  for (int i = 0; i < Registry::MaxThreats; i++) {
+  for (int i = 0; i < Registry::MAX_THREATS; i++) {
     Registry::GameThreats[i].Update();
   }
 

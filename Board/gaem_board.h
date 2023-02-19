@@ -34,6 +34,6 @@ enum DISP_MODE_T {
   DISP_ON
 };
 
-//struct Disp_Pixel { };
+struct Disp_Pixel;
 
 #endif

@@ -12,6 +12,8 @@
 #ifndef GAEM_ACTORS_H_
 #define GAEM_ACTORS_H_
 
+#include "gaem_engine.h"
+
 class Actor;
 class Player;
 class Threat;

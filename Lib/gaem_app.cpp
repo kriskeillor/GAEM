@@ -3,17 +3,15 @@
 #include "gaem_app.h"
 
 namespace Registry {
-  // APP VARIABLES
-  static bool DrawInverted;
-  static APP_STATE_T State;
-
+// APP VARIABLES
+  //DrawInverted = false;
+  APP_STATE_T State = STARTUP;
+  
   // APP OBJECTS
-  static Player GamePlayer;
-  static Threat GameThreats[4];
-  static Disp_Pixel Display[4][2];
+  Player GamePlayer;
+  Threat GameThreats[4];
+  Disp_Pixel Display[4][2];
 
-  // APP METHODS
-  static void Registry_Init() { }
   // APP METHODS
   void Reg_Init(void) {
     // Init Variables
@@ -29,12 +27,4 @@ namespace Registry {
   }
 };
 
-/*
-// Allocate memory for static variables
-//    /!\     (deprecated)     /!\
-bool App_Register::DrawInverted;
-APP_STATE_T App_Register::AppState;
-Player App_Register::GamePlayer;
-Threat App_Register::GameThreats[4];
-Disp_Pixel App_Register::Display[4][2];
-*/
+
