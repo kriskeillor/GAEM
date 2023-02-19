@@ -12,7 +12,12 @@
 #ifndef GAEM_ACTORS_H_
 #define GAEM_ACTORS_H_
 
-#include "gaem_engine.h"
+// Out-of-Bounds behavior
+enum OOB_BEHAVIOR_T { BIND, CULL };
+// Collision behavior
+enum COLLIDE_BEHAVIOR_T { KILL, DIE };
+// End (exit or death) behavior
+enum END_BEHAVIOR_T { SCORE, END_GAME };
 
 class Actor;
 class Player;

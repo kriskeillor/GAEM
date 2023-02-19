@@ -17,8 +17,12 @@
 const int ledOffset = 5;
 const int ledCount = 8;
 // LED Display
-const int dispWidth = 4;
-const int dispHeight = 2;
+const int DISP_WIDTH = 4;
+const int DISP_HEIGHT = 2;
+const int WALL_LEFT = 0;
+const int WALL_RIGHT = DISP_WIDTH - 1;
+const int WALL_CEIL = 0;
+const int WALL_FLOOR = DISP_HEIGHT - 1;
 // Buttons
 const int butOffset = 19;
 const int butCount = 3;
