@@ -19,17 +19,15 @@ enum APP_STATE_T { STARTUP, ENDLESS, GAMEOVER, IDLE };
 
 namespace Registry {
   // APP CONSTANTS
-  const int MAX_THREATS = 4;
-  const int LOOP_TICK = 250;            // Game refresh rate in ms
-  const int DrawCallsPerTick = 5;
+  const int LOOP_TICK = 250;			// App update period in ms
+  /* The PROGRAM loop runs more frequently than the display. 	*/
 
   // APP VARIABLES
-  bool DrawInverted;
+  extern APP_STATE_T State;
   int Score = 0;
+  const int MAX_THREATS = 4;
   int ThreatSpawnTime = LOOP_TICK * 10; // Threat spawn rate in ms
   int ThreatSpawn_t = 0;                // Threat spawning counter
-
-  extern APP_STATE_T State;
 
   // APP OBJECTS
   extern Player GamePlayer;
@@ -40,6 +38,11 @@ namespace Registry {
   void Reg_Init();
   void Reg_Update();
   void Reg_Draw();
+
+  // DISPLAY VARIABLES
+  const int DRAW_TICK = 50;				// App draw period in ms
+  const int DrawCallsPerTick = LOOP_TICK / DRAW_TICK;
+  bool DrawInverted;
 };
 
 #endif

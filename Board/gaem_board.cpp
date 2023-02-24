@@ -8,6 +8,9 @@
   v1.0 2023-02-23 KGK
 */
 
+// ATmega32u4 header file
+#include <avr/io.h>
+
 #include "gaem_board.h"
 
 struct Disp_Pixel {
@@ -45,3 +48,18 @@ struct Disp_Pixel {
         MinBrightness = minBrightness;
     }
 };
+
+void Setup_Board(void) {
+  // HARDWARE SETUP
+  // initialize digital pins as an outputs for LEDs.
+  pinMode(LED_BUILTIN, OUTPUT);
+  for (int pinN = LED_OFFSET; pinN <= LED_OFFSET + LED_COUNT; pinN++) {  
+    pinMode(pinN, OUTPUT);
+  }
+
+  // initialize digital pins as an inputs for buttons.
+  // TODO: enable pulldown resistors (after hardware revision to v1.2)
+  for (int butN = BUT_OFFSET; butN <= BUT_OFFSET + BUT_COUNT; butN++) {
+    pinMode(butN, INPUT);
+  }
+}

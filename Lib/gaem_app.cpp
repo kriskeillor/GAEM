@@ -99,7 +99,7 @@ namespace Registry {
     GamePlayer.Draw();
     GameThreat.Draw();
 
-    int pinN = ledOffset;
+    int pinN = LED_OFFSET;
     for (int x = DISP_WIDTH - 1; x >= 0; x--) {
       for (int y = DISP_HEIGHT - 1; y >= 0; y--) {
         if (Registry::Display[x][y].Disp_Mode == DISP_ON) {

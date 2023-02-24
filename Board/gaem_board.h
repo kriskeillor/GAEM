@@ -7,14 +7,14 @@
 
   v1.0 2023-02-18 KGK
 */
-
+/**********************************************************************/
 #ifndef GAEM_BOARD_H_
 #define GAEM_BOARD_H_
 
 /* BOARD DEFINITION CONSTANTS */
 // LED Output Pins
-const int ledOffset = 5;
-const int ledCount = 8;
+const int LED_OFFSET = 5;
+const int LED_COUNT = 8;
 // LED Display
 const int DISP_WIDTH = 4;
 const int DISP_HEIGHT = 2;
@@ -23,8 +23,8 @@ const int WALL_RIGHT = DISP_WIDTH - 1;
 const int WALL_CEIL = 0;
 const int WALL_FLOOR = DISP_HEIGHT - 1;
 // Buttons
-const int butOffset = 19;
-const int butCount = 3;
+const int BUT_OFFSET = 19;
+const int BUT_COUNT = 3;
 const int but1 = 20;
 const int but2 = 21;
 const int but3 = 19;      // Button 3 is routed back to input 19
@@ -38,5 +38,7 @@ enum DISP_MODE_T {
 };
 
 struct Disp_Pixel;
+
+void Setup_Board();
 
 #endif

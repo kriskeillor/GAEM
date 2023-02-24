@@ -25,19 +25,10 @@
 /**********************************************************************/
 // FUNCTIONS
 void setup() {
-  // TODO: Move to board source
   // HARDWARE SETUP
-  // initialize digital pins as an outputs for LEDs.
-  pinMode(LED_BUILTIN, OUTPUT);
-  for (int pinN = ledOffset; pinN <= ledOffset + ledCount; pinN++) {  
-    pinMode(pinN, OUTPUT);
-  }
-
-  // initialize digital pins as an inputs for buttons.
-  // TODO: enable pulldown resistors (after hardware revision to v1.2)
-  for (int butN = butOffset; butN <= butOffset + butCount; butN++) {
-    pinMode(butN, INPUT);
-  }
+  Setup_Board();
+  Setup_Player_Jump_Interrupt();
+  Setup_Player_Fall_Timer();
 
   Serial.begin(9600);
 
@@ -59,8 +50,8 @@ void loop() {
   // Draw call processes more frequently than logic update call
   int di = 0;
   while (di < Registry::DrawCallsPerTick) {
-    Registry::Reg_Draw();
     di++;
-    delay(Registry::LOOP_TICK / Registry::DrawCallsPerTick);
+    Registry::Reg_Draw();
+    delay(Registry::DRAW_TICK);
   }
 }
