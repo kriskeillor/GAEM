@@ -1,7 +1,9 @@
 /*
-  Boulder Jump game
-
-  Use the left and right buttons and jump button to evade the boulders!
+  # GAEM
+  ## General Arduino Exploration Machine
+  Perma-proto interface for the Arduino Micro.
+  Adds three buttons and a 4x2 LED display.
+  https://github.com/kriskeillor/GAEM/
 
   v1.0 2023-02-19 KGK
 */
