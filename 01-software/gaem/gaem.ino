@@ -36,7 +36,7 @@ void setup() {
   // initialize digital pins as an inputs for buttons.
   // TODO: enable pulldown resistors (after hardware revision to v1.2)
   for (int butN = butOffset; butN <= butOffset + butCount; butN++) {
-    pinMode(butN, INPUT);
+    pinMode(butN, INPUT_PULLUP);
   }
 
   Serial.begin(9600);
