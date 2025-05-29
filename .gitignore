@@ -1,2 +1,4 @@
 03-hardware/gaem_backplane/*
 03-hardware/gaem_soldering_jig/*
+03-hardware/gaem_led_shield/gaem_led_shield-backups/*
+03-hardware/**/fp-info-cache
